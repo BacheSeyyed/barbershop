@@ -1,6 +1,5 @@
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
 import java.util.concurrent.Semaphore;
 
 public class BarberShop {
@@ -147,7 +146,6 @@ public class BarberShop {
 
 
     public void go() {
-        Scanner input = new Scanner(System.in);
         count = 0;
         // initialize finished semaphor
         for (int i = 0; i < finished.length; i++)
@@ -167,6 +165,7 @@ public class BarberShop {
 
                 Customer c=new Customer();
                 c.start();
+                Thread.sleep(500);
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
